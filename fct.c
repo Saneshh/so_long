@@ -50,5 +50,15 @@ int check_map(t_game *s)
 			s->count += 1;
 		}
 		i++;
+		while (i > 0)
+		{
+			if (strlen(s->map[i] != strlen(s->map[i - 1])))
+				exit_error();
+		}
 	}
+}
+void exit_error()
+{
+
+	exit(1);
 }
