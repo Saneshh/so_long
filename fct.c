@@ -138,9 +138,9 @@ void check_map_possible(t_game *s, int i, int j)
 void check_map_final(t_game *s)
 {
 	s->i = 0;
-	s->j = 0;
 	while (s->map_cpy[s->i])
 	{
+		s->j = 0;
 		while (s->map_cpy[s->i][s->j])
 		{
 			if (s->map_cpy[s->i][s->j] != '1')
