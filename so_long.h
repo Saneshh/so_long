@@ -25,17 +25,19 @@ typedef struct s_coord
 	int	y;
 }	t_coord;
 
-typedef struct s_count
+
+typedef	struct s_game
 {
+	int i;
+	int j;
 	int C;
 	int	P;
 	int E;
 	int wall;
 	int ground;
-}	t_count;
-
-typedef	struct s_game
-{
+	int line;
+	int move;
+	char **map_cpy;
 	char **map;
 	t_count *count;
 	t_coord *coord;
