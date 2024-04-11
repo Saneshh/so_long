@@ -1,3 +1,4 @@
+//---3---
 void parsing(int fd, t_game *s)
 {
 	s->map = ft_calloc(s->line, sizeof(char *));
@@ -11,7 +12,7 @@ void parsing(int fd, t_game *s)
 		s->i++;
 	}
 }
-
+//---5---
 int count_element(t_game *s)
 {
 	s->i = 0;
@@ -36,7 +37,9 @@ int count_element(t_game *s)
 	}
 }
 
-void init_struct(t_game *s)
+
+ //---1---
+void init_struct(t_game *s) 
 {
 	s->ground = 0;
 	s->wall = 0;
@@ -46,7 +49,7 @@ void init_struct(t_game *s)
 	s->line = 0;
 	s->move = 0;
 }
-
+//---2---
 void init_map(t_game *s)
 {
 	int read_size;
@@ -72,7 +75,7 @@ void init_map(t_game *s)
 	}
 	free(s->buffer);
 }
-
+//---4---
 int check_map(t_game *s)
 {
 	s->i = 0;
@@ -100,7 +103,7 @@ int check_map(t_game *s)
 		}
 	}
 }
-
+//---6---
 void check_map_format(t_game *s)
 {
 	s->i = 0;
@@ -119,7 +122,7 @@ void check_map_format(t_game *s)
 	if (s->C == 0 || s->P != 1 || s-> E != 1)
 		exit_error(s, "Missing Player, Collectible or Exit");
 }
-
+//---7---
 void check_map_possible(t_game *s, int i, int j)
 {
 	//int i = s->coord->x;
@@ -145,7 +148,7 @@ void check_map_possible(t_game *s, int i, int j)
 		check_map_possible(s, i, j + 1);
 	}
 }
-
+//---8---
 void check_map_final(t_game *s)
 {
 	s->i = 0;
@@ -177,7 +180,7 @@ int main(int argc, char **argv)
 
 	mlx_loop(mlx);
 }
-
+//---1*---
 void set_img(t_game *s)
 {
 	int	img_width;
@@ -199,9 +202,10 @@ void set_img(t_game *s)
 
 void set_key_bind()
 {
-	mlx_hook(s->mlx_win, 02, (1L<<0), key_bind, s);
-	mlx_hook(s->mlx_win, 08, (1L<<5), end, s);
+	mlx_hook(s->mlx_win, 2, (1L<<0), key_bind, s);
+	mlx_hook(s->mlx_win, 8, (1L<<5), end, s);
 }
+//---9---
 void key_bind(int keybind, t_game *s)
 {
 	if (keybind == 87)
@@ -288,7 +292,7 @@ void end(t_game *s)
 	mlx_destroy_window(s->mlx, s->mlx_win);
 	exit_error();
 }
-
+//---8---
 void put_img(t_game *s)
 {
 	s->i = 0;
