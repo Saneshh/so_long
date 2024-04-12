@@ -6,7 +6,7 @@
 /*   By: hsolet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:35:57 by hsolet            #+#    #+#             */
-/*   Updated: 2024/04/12 15:02:15 by hsolet           ###   ########.fr       */
+/*   Updated: 2024/04/12 15:30:49 by hsolet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "so_long.h"
@@ -22,14 +22,14 @@ void put_img(t_game *s)
 			if (s->map[s->i][s->j] == '1')
 				mlx_put_image_to_window(s->mlx, s->mlx_win, s->img->W, 90, 90);
 			else if (s->map[s->i][s->j] >= '0'
-					&& (s->map[s->i][s->j] != 'E' || s->map[i][j] != ('E' + 'P'))
+					&& (s->map[s->i][s->j] != 'E' || s->map[i][j] != ('E' + 'P')))
 			{	
 				mlx_put_image_to_window(s->mlx, s->mlx_win, s->img->g, 90, 90);
-				s->map[s->i][s->j] -= '0';
 			}
 			else if (s->map[s->i][s->j] == ('E' + 'P'))
 				mlx_put_image_to_window(s->mlx, s->mlx_win, s->img->e, 90, 90);
-			if (s->map[s->i][s->j] == 'P')
+			if (s->map[s->i][s->j] == 'P' || s->map[s->i][s->j] == ('E' + 'P')
+				|| s->map[s->i][s->j] == ('0' + 'P'))
 				mlx_put_image_to_window(s->mlx, s->mlx_win, s->img->p, 90, 90);
 			if (s->map[s->i][s->j] == 'C')
 				mlx_put_image_to_window(s->mlx, s->mlx_win, s->img->c, 90, 90);
