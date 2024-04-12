@@ -1,6 +1,7 @@
-//---3---
+//---3--- //
 void parsing(int fd, t_game *s)
 {
+	open(s->folder, 0_RDONLY);
 	s->map = ft_calloc(s->line, sizeof(char *));
 	if (!(s->map))
 		return ;
@@ -8,11 +9,14 @@ void parsing(int fd, t_game *s)
 	while (s->i < s->line)
 	{
 		s->map[s->i] = get_next_line(fd);
+		if (ft_strlen(s->map[s->i]) > 500)
+			error_exit(s);
 		s->map_cpy[s->i] = ft_strdup[s->i];
 		s->i++;
 	}
+	close(s->fd);
 }
-//---5---
+//---5--- //
 int count_element(t_game *s)
 {
 	s->i = 0;
@@ -38,7 +42,7 @@ int count_element(t_game *s)
 }
 
 
- //---1---
+ //---1--- //
 void init_struct(t_game *s) 
 {
 	s->ground = 0;
@@ -48,13 +52,16 @@ void init_struct(t_game *s)
 	s->C = 0;
 	s->line = 0;
 	s->move = 0;
+	s->img_width = 90;
+	s->img_height = 90;
+	s->read_size = 1;
 }
-//---2---
+//---2--- //
 void init_map(t_game *s)
 {
-	int read_size;
-
-	read_size = 1;
+	s->fd = open(s->folder, 0_RDONLY);
+	if (s->fd <= 0)
+		exit_error(s, "Bad folder");
 	s->i = 0;
 	s->str = ft_strdup("");
 	s->buffer = ft_calloc(2048, sizeof(char));
@@ -62,7 +69,7 @@ void init_map(t_game *s)
 		return ;
 	while (read_size > 0)
 	{
-		read_size = read(fd, s->buffer, 2048);
+		s->read_size = read(s->fd, s->buffer, 2048);
 		s->str = ft_strjoin(str, s->buffer);
 		free(s->buffer);
 	}
@@ -71,11 +78,12 @@ void init_map(t_game *s)
 		if (s->str[s->i] == '\n' && s->str[s->i - 1] && s->str[s->i - 1] != '\n')
 			s->line += 1;
 		else 
-			exit_error();
+			exit_error(s, "Bad folder");
 	}
 	free(s->buffer);
+	close(s->fd);
 }
-//---4---
+//---4--- //
 int check_map(t_game *s)
 {
 	s->i = 0;
@@ -98,12 +106,12 @@ int check_map(t_game *s)
 		while (s->i > 0)
 		{
 			if (strlen(s->map[s->i] != strlen(s->map[s->i - 1])))
-				exit_error();
+				exit_error(s);
 			i--;
 		}
 	}
 }
-//---6---
+//---6--- //
 void check_map_format(t_game *s)
 {
 	s->i = 0;
@@ -114,19 +122,19 @@ void check_map_format(t_game *s)
 		{
 			if ((s->map[s->i][s->j] != '1' && (s->j == 0 || s->j == ft_strlen(s->j)))
 				|| (s->map[s->i][s->j] != '1' && (s->i == 0 || s->i == ft_strlen(s->i)))
-				exit_error();
+				exit_error(s, "");
 			s->j++;
 		}
 		s->i++;
 	}
 	if (s->C == 0 || s->P != 1 || s-> E != 1)
 		exit_error(s, "Missing Player, Collectible or Exit");
+	check_map_possible(s, s->coord->x, s->coord->y);
+	check_map_final(s);
 }
-//---7---
+//---7--- //
 void check_map_possible(t_game *s, int i, int j)
 {
-	//int i = s->coord->x;
-	//int j = s->coord->y;
 	if (s->map_cpy[i - 1] != '1')
 	{
 		s->map_cpy[i - 1] = '1';
@@ -146,9 +154,8 @@ void check_map_possible(t_game *s, int i, int j)
 	{
 		s->map_cpy[j - 1] = '1';
 		check_map_possible(s, i, j + 1);
-	}
 }
-//---8---
+//---8--- //
 void check_map_final(t_game *s)
 {
 	s->i = 0;
@@ -164,46 +171,84 @@ void check_map_final(t_game *s)
 		s->i++;
 	}
 }
-
-void exit_error()
+//
+void exit_error(t_game *s, char *str)
 {
-
+	if (str)
+		ft_printf("%s", str);
+	s->i = 0;
+	if (s->map)
+	{
+		while (s->map[i])
+		{
+			if (s->map[i])
+				free(s->map[i]);
+			i++;
+		}
+		free(s->map);
+	}
+	s->i = 0;
+	if (s->map_cpy)
+	{
+		while (s->map_cpy[i])
+		{
+			if (s->map_cpy[i])
+				free(s->map_cpy[i]);
+			i++;
+		}
+		free(s->map_cpy);
+	}
+	free_struct(s);
 	exit(1);
 }
-
-int main(int argc, char **argv)
+//
+void free_struct(t_game *s)
 {
-	t_game *s;
-
-	s->mlx = mlx_init();
-	s->mlx_win = mlx_new_window(s->mlx, 1920, 1080, "So_long");
-
-	mlx_loop(mlx);
+	if (s->img->P)
+		mlx_destroy_image(s->mlx, s->img->P);
+	if (s->img->E)
+		mlx_destroy_image(s->mlx, s->img->E);
+	if (s->img->C)
+		mlx_destroy_image(s->mlx, s->img->C);
+	if (s->img->G)
+		mlx_destroy_image(s->mlx, s->img->G);
+	if (s->img->W)
+		mlx_destroy_image(s->mlx, s->img->W);
+	if (s->mlx_win)
+		mlx_destroy_window(s->mlx, s->mlx_win);
+	if (s)
+		free(s);
 }
-//---1*---
+
+//---1*--- //
 void set_img(t_game *s)
 {
-	int	img_width;
-	int	img_height;
-
-	img_width = 90;
-	img_height = 90;
 	s->img->P = mlx_xpm_file_to_image(mlx,
-		"./image/player.xpm", &img_width, &img_height)
+		"./image/player.xpm", s->&img_width, s->&img_height)
+		if (s->img->P == 0)
+			exit_error(s, "Image can't be load");
 	s->img->C = mlx_xpm_file_to_image(mlx,
-		"./image/collectible.xpm", &img_width, &img_height)
+		"./image/collectible.xpm", s->&img_width, s->&img_height)
+		if (s->img->C == 0)
+			exit_error(s, "Image can't be load");
 	s->img->E = mlx_xpm_file_to_image(mlx,
-		"./image/exit.xpm", &img_width, &img_height)
+		"./image/exit.xpm", s->&img_width, s->&img_height)
+		if (s->img->E == 0)
+			exit_error(s, "Image can't be load");
 	s->img->W = mlx_xpm_file_to_image(mlx,
-		"./image/wall.xpm", &img_width, &img_height)
+		"./image/wall.xpm", s->&img_width, s->&img_height)
+		if (s->img->W == 0)
+			exit_error(s, "Image can't be load");
 	s->img->G = mlx_xpm_file_to_image(mlx,
-		"./image/ground.xpm", &img_width, &img_height)
+		"./image/ground.xpm", s->&img_width, s->&img_height)
+		if (s->img->G == 0)
+			exit_error(s, "Image can't be load");
 }
 
 void set_key_bind()
 {
 	mlx_hook(s->mlx_win, 2, (1L<<0), key_bind, s);
-	mlx_hook(s->mlx_win, 8, (1L<<5), end, s);
+	mlx_hook(s->mlx_win, 17, (1L<<17), end, s);
 }
 //---9---
 void key_bind(int keybind, t_game *s)
@@ -225,9 +270,16 @@ void move_up(t_game *s)
 	if (s->map[s->coord->x][s->coord->y + 1] == "1")
 		return ;
 	else if (ft_strchr("0E", s->map[s->coord->x][s->coord->y + 1]))
+	{
+		if (s->map[s->coord->x][s->coord->y + 1] == 'E' && s->C == 0)
+			exit_error(s, "YOU WIN!!!");
 		s->map[s->coord->x][s->coord->y + 1] += 'P' ;
+	}
 	else
-		s->map[s->coord->x][s->coord->y + 1] = ('P' + '0') ;
+	{
+		s->map[s->coord->x][s->coord->y + 1] = ('P' + '0');
+		s->C--;
+	}
 	if (s->map[s->coord->x][s->coord->y] == ('P' + 'E'))
 		s->map[s->coord->x][s->coord->y] == 'E';
 	else
@@ -235,6 +287,7 @@ void move_up(t_game *s)
 	s->coord->y += 1
 	s->move += 1;
 	ft_printf("move : %d", s->move);
+	put_img(s);
 }
 
 void move_down(t_game *s)
@@ -242,9 +295,16 @@ void move_down(t_game *s)
 	if (s->map[s->coord->x][s->coord->y - 1] == "1")
 		return ;
 	else if (ft_strchr("0E", s->map[s->coord->x][s->coord->y - 1]))
+	{
+		if (s->map[s->coord->x][s->coord->y - 1] == 'E' && s->C == 0)
+			exit_error(s, "YOU WIN!!!");
 		s->map[s->coord->x][s->coord->y - 1] += 'P' ;
+	}
 	else
+	{
 		s->map[s->coord->x][s->coord->y - 1] = ('P' + '0') ;
+		s->C--;
+	}
 	if (s->map[s->coord->x][s->coord->y] == ('P' + 'E'))
 		s->map[s->coord->x][s->coord->y] == 'E';
 	else
@@ -252,6 +312,7 @@ void move_down(t_game *s)
 	s->coord->y -= 1;
 	s->move += 1;
 	ft_printf("move : %d", s->move);
+	put_img(s);
 }
 
 void move_left(t_game *s)
@@ -259,9 +320,16 @@ void move_left(t_game *s)
 	if (s->map[s->coord->x - 1][s->coord->y] == "1")
 		return ;
 	else if (ft_strchr("0E", s->map[s->coord->x - 1][s->coord->y]))
+	{
+		if (s->map[s->coord->x - 1][s->coord->y] == 'E' && s->C == 0)
+			exit_error(s, "YOU WIN!!!");
 		s->map[s->coord->x - 1][s->coord->y] += 'P' ;
+	}
 	else
+	{
 		s->map[s->coord->x - 1][s->coord->y] = ('P' + '0') ;
+		s->C--;
+	}
 	if (s->map[s->coord->x][s->coord->y] == ('P' + 'E'))
 		s->map[s->coord->x][s->coord->y] == 'E';
 	else
@@ -269,6 +337,7 @@ void move_left(t_game *s)
 	s->coord->x -= 1
 	s->move += 1;
 	ft_printf("move : %d", s->move);
+	put_img(s);
 }
 
 void move_right(t_game *s)
@@ -276,21 +345,28 @@ void move_right(t_game *s)
 	if (s->map[s->coord->x + 1][s->coord->y] == "1")
 		return ;
 	else if (ft_strchr("0E", s->map[s->coord->x + 1][s->coord->y]))
+	{
+		if (s->map[s->coord->x + 1][s->coord->y] == 'E' && s->C == 0)
+			exit_error(s, "YOU WIN!!!");
 		s->map[s->coord->x + 1][s->coord->y] += 'P' ;
+	}
 	else
+	{
 		s->map[s->coord->x + 1][s->coord->y] = ('P' + '0') ;
-	if (s->map[s->coord->x][s->coord->y] == ('P' + 'E'))
+		s->C--;
+	}
+		if (s->map[s->coord->x][s->coord->y] == ('P' + 'E'))
 		s->map[s->coord->x][s->coord->y] == 'E';
 	else
 		s->map[s->coord->x][s->coord->y] == '0';
 	s->coord->x += 1;
 	s->move += 1;
 	ft_printf("move : %d", s->move);
+	put_img(s);
 }
 void end(t_game *s)
 {
-	mlx_destroy_window(s->mlx, s->mlx_win);
-	exit_error();
+	exit_error(s, "Window Closed");
 }
 //---8---
 void put_img(t_game *s)
