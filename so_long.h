@@ -6,7 +6,7 @@
 /*   By: hsolet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 09:47:36 by hsolet            #+#    #+#             */
-/*   Updated: 2024/04/12 15:00:42 by hsolet           ###   ########.fr       */
+/*   Updated: 2024/04/13 12:07:31 by hsolet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 #ifndef SO_LONG_H
 # define SO_LONG_H
 # include "libft/libft.h"
-# include "get_next_line/get_next_line.h"
 # include <stdlib.h>
 # include <unistd.h>
+# include <mlx.h>
 
 typedef struct s_coord
 {

@@ -6,11 +6,11 @@
 /*   By: hsolet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 18:44:42 by hsolet            #+#    #+#             */
-/*   Updated: 2024/01/14 05:26:44 by hsolet           ###   ########.fr       */
+/*   Updated: 2024/04/13 12:02:45 by hsolet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
 
 void	read_buffer(char **str, ssize_t *read_size, int fd)
 {

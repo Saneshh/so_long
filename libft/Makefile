@@ -55,8 +55,8 @@ SRC = 		 ft_isdigit.c \
 			 ft_printf/ft_putnbr_base.c \
 			 ft_printf/ft_printf.c \
 			 ft_printf/ft_putchar.c \
-			 get_next_line/get_next_line.c\
-			 get_next_line/get_next_line_utils.c\
+			 get_next_line.c\
+
 
 OBJ = $(SRC:.c=.o)
 NAME = libft.a
