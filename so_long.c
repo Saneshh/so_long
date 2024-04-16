@@ -6,7 +6,7 @@
 /*   By: hsolet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:39:43 by hsolet            #+#    #+#             */
-/*   Updated: 2024/04/16 14:43:49 by hsolet           ###   ########.fr       */
+/*   Updated: 2024/04/16 15:17:01 by hsolet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "so_long.h"
@@ -39,21 +39,24 @@ void init_map(t_game *s)
 		exit_error(s, "Bad folder");
 	s->i = 0;
 	s->str = ft_strdup("");
-	s->buffer = ft_calloc(2048, sizeof(char));
+	s->buffer = ft_calloc(1025, sizeof(char));
 	if (!s->buffer)
 		return ;
 	while (s->read_size > 0)
 	{
-		s->read_size = read(s->fd, s->buffer, 2048);
+		s->read_size = read(s->fd, s->buffer, 1024);
 		s->str = ft_strjoin(s->str, s->buffer);
-		s->buffer = NULL;
 	}
 	while (s->str[s->i++])
 	{
 		if (s->str[s->i] == '\n' && s->str[s->i - 1] && s->str[s->i - 1] != '\n')
 			s->line += 1;
-		else 
-			exit_error(s, "Bad folder");
+		else
+		{
+			free(s->buffer);
+			close(s->fd);
+			exit_error(s, "Bad folderrrr");
+		}
 	}
 	free(s->buffer);
 	close(s->fd);
