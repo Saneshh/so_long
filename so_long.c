@@ -18,14 +18,20 @@ void parsing(t_game *s)
 	if (!(s->map))
 		return ;
 	s->map_cpy = ft_calloc(s->line, sizeof(char *));
-	if (!s->map)
+	if (!s->map_cpy)
 		return ;
 	s->i = 0;
 	while (s->i < s->line)
 	{
-		s->map[s->i] = get_next_line(s->fd);
+		s->map[s->i] = ft_strtrim(get_next_line(s->fd), "\n");
+		ft_printf("%s\n", s->map[s->i]);
+		if (s->map[s->i] == NULL)
+		{
+			ft_printf("sdasas");
+			break;
+		}
 		if (ft_strlen(s->map[s->i]) > 500)
-			exit_error(s, "Error\n");
+			exit_error(s, "Error1\n");
 		s->map_cpy[s->i] = ft_strdup(s->map[s->i]);
 		s->i++;
 	}
@@ -51,7 +57,7 @@ void init_map(t_game *s)
 	{
 		if (s->str[s->i] == '\n' && s->str[s->i - 1] && s->str[s->i - 1] != '\n')
 			s->line += 1;
-		else
+		else if (s->str[s->i] == '\n' && s->str[s->i - 1] == '\n')
 		{
 			free(s->buffer);
 			close(s->fd);

@@ -19,8 +19,9 @@ void check_map(t_game *s)
 		s->j = 0;
 		while (s->map[s->i][s->j])
 		{
-			if (!ft_strchr("01PEC", s->map[s->i][s->j]))
-			exit_error(s, "Error\n");
+			if (ft_strchr("01PEC", s->map[s->i][s->j]) == NULL)
+				exit_error(s, "Error2\n");
+			ft_printf("bug 1");
 			if (s->map[s->i][s->j] == 'P')
 			{
 				s->coord->x = s->i;
@@ -29,13 +30,15 @@ void check_map(t_game *s)
 			s->j++;
 		}
 		s->i++;
-		while (s->i > 0)
-		{
-			if (strlen(s->map[s->i]) != strlen(s->map[s->i - 1]))
-				exit_error(s, "Error\n");
-			s->i--;
-		}
 	}
+	while (s->i >= 0)
+	{
+		ft_printf("bug 2");
+		if (strlen(s->map[s->i]) != strlen(s->map[s->i - 1]))
+			exit_error(s, "Error3\n");
+		s->i--;
+	}
+
 }
 
 void count_element(t_game *s)
