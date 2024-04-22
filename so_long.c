@@ -6,7 +6,7 @@
 /*   By: hsolet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:39:43 by hsolet            #+#    #+#             */
-/*   Updated: 2024/04/16 15:17:01 by hsolet           ###   ########.fr       */
+/*   Updated: 2024/04/22 13:41:15 by hsolet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "so_long.h"
@@ -82,6 +82,9 @@ void init_struct(t_game *s)
 	s->read_size = 1;
 	s->img = ft_calloc(1, sizeof(*s->img));
 	if(!s->img)
+		return;
+	s->coord = ft_calloc(1, sizeof(*s->coord));
+	if (!s->coord)
 		return;
 }
 

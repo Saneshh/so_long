@@ -31,12 +31,14 @@ void check_map(t_game *s)
 		}
 		s->i++;
 	}
-	while (s->i >= 0)
+	while (s->i > 1)
 	{
-		ft_printf("bug 2");
-		if (strlen(s->map[s->i]) != strlen(s->map[s->i - 1]))
-			exit_error(s, "Error3\n");
 		s->i--;
+		ft_printf("BUG DE FOU : %s", s->map[s->i]);
+		ft_printf("bug 2\n i = %d", s->i);
+		if (ft_strlen(s->map[s->i]) != ft_strlen(s->map[s->i - 1]))
+			exit_error(s, "Error3\n");
+
 	}
 
 }
@@ -84,7 +86,7 @@ static void check_map_possible(t_game *s, int i, int j)
 	}
 	if (s->map_cpy[i][j - 1] != '1')
 	{
-		s->map_cpy[i][j - 1] = '1';
+		s->map_cpy[i][j + 1] = '1';
 		check_map_possible(s, i, j + 1);
 	}
 }
@@ -97,8 +99,11 @@ static void check_map_final(t_game *s)
 		s->j = 0;
 		while (s->map_cpy[s->i][s->j])
 		{
-			if (s->map_cpy[s->i][s->j] != '1')
+			if (s->map_cpy[s->i][s->j] != '1' && s->map_cpy[s->i][s->j] != 'P')
+				{
+				ft_printf("x = %d\n y = %d\n charactere = %c", s->i, s->j, s->map[s->i][s->j]);
 				exit_error(s, "Map not winnable");
+					}
 			s->j++;
 		}
 		s->i++;
