@@ -6,7 +6,7 @@
 /*   By: hsolet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:39:43 by hsolet            #+#    #+#             */
-/*   Updated: 2024/04/22 13:41:15 by hsolet           ###   ########.fr       */
+/*   Updated: 2024/04/23 15:23:46 by hsolet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "so_long.h"
@@ -14,20 +14,20 @@
 void parsing(t_game *s)
 {
 	s->fd = open(s->folder, O_RDONLY);
-	s->map = ft_calloc(s->line, sizeof(char *));
+	s->map = ft_calloc(s->line + 1, sizeof(char *));
 	if (!(s->map))
 		return ;
-	s->map_cpy = ft_calloc(s->line, sizeof(char *));
+	s->map_cpy = ft_calloc(s->line + 1, sizeof(char *));
 	if (!s->map_cpy)
 		return ;
 	s->i = 0;
 	while (s->i < s->line)
 	{
 		s->map[s->i] = ft_strtrim(get_next_line(s->fd), "\n");
-		ft_printf("%s\n", s->map[s->i]);
+		//ft_printf("%s\n", s->map[s->i]);
 		if (s->map[s->i] == NULL)
 		{
-			ft_printf("sdasas");
+		//	ft_printf("sdasas");
 			break;
 		}
 		if (ft_strlen(s->map[s->i]) > 500)
@@ -43,7 +43,7 @@ void init_map(t_game *s)
 	s->fd = open(s->folder, O_RDONLY);
 	if (s->fd <= 0)
 		exit_error(s, "Bad folder");
-	s->i = 0;
+	s->i = 1;
 	s->str = ft_strdup("");
 	s->buffer = ft_calloc(1025, sizeof(char));
 	if (!s->buffer)
@@ -51,13 +51,20 @@ void init_map(t_game *s)
 	while (s->read_size > 0)
 	{
 		s->read_size = read(s->fd, s->buffer, 1024);
-		s->str = ft_strjoin(s->str, s->buffer);
+		if (s->read_size > 0)
+			s->str = ft_strjoin(s->str, s->buffer);
+	//	ft_printf("\nstr = %s\n buffer = %s\n", s->str, s->buffer);
+		
 	}
 	while (s->str[s->i++])
 	{
 		if (s->str[s->i] == '\n' && s->str[s->i - 1] && s->str[s->i - 1] != '\n')
-			s->line += 1;
-		else if (s->str[s->i] == '\n' && s->str[s->i - 1] == '\n')
+		{
+	//		ft_printf("\ns->str = %s et s->str[s->i+1] = %c\n", s->str, s->str[s->i + 1]);
+	//	ft_printf("\nline =  %d\n", s->line);
+			s->line++;
+		}
+		else if (s->str[s->i] == '\n' && s->str[s->i -1] == '\n')
 		{
 			free(s->buffer);
 			close(s->fd);
