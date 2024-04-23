@@ -1,3 +1,3 @@
-fct free
-tout rassembler
-faire le main
+changer axe x et y dans tout les move
+changer le strchr "0E" par == E || == (char)(valeur '0' + 'E')
+trouver pourquoi l'affichage s'effectue sur le mauvais axes

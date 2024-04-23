@@ -6,7 +6,7 @@
 /*   By: hsolet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 09:47:36 by hsolet            #+#    #+#             */
-/*   Updated: 2024/04/16 13:29:41 by hsolet           ###   ########.fr       */
+/*   Updated: 2024/04/23 15:51:48 by hsolet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ typedef struct s_coord
 
 typedef struct s_image
 {
-	void	*w;
-	void	*p;
-	void	*c;
-	void	*e;
-	void	*g;
+	void	*wall;
+	void	*player;
+	void	*col;
+	void	*exit;
+	void	*ground;
 }	t_image;
 
 typedef	struct s_game

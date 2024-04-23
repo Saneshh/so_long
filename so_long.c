@@ -6,7 +6,7 @@
 /*   By: hsolet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:39:43 by hsolet            #+#    #+#             */
-/*   Updated: 2024/04/23 15:23:46 by hsolet           ###   ########.fr       */
+/*   Updated: 2024/04/23 15:52:11 by hsolet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "so_long.h"
@@ -127,7 +127,7 @@ int	main(int argc, char **argv)
 	check_map(s);
 	count_element(s);
 	check_map_format(s);
-	s->mlx_win = mlx_new_window(s->mlx,ft_strlen(s->map[0]) , s->line*90, "So_long");
+	s->mlx_win = mlx_new_window(s->mlx,ft_strlen(s->map[0])*90 , s->line*90, "So_long");
 	put_img(s);
 	mlx_hook(s->mlx_win, 2, (1L<<0), key_bind, s);
 	mlx_hook(s->mlx_win, 17, (1L<<17), end, s);

@@ -6,7 +6,7 @@
 /*   By: hsolet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:32:03 by hsolet            #+#    #+#             */
-/*   Updated: 2024/04/23 15:26:06 by hsolet           ###   ########.fr       */
+/*   Updated: 2024/04/23 15:57:07 by hsolet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "so_long.h"
@@ -130,6 +130,6 @@ void check_map_format(t_game *s)
 	}
 	if (s->col == 0 || s->player != 1 || s->ext != 1)
 		exit_error(s, "Missing Player, Collectible or Exit");
-	check_map_possible(s, s->coord->x, s->coord->y);
+	check_map_possible(s, s->coord->y, s->coord->x);
 	check_map_final(s);
 }
