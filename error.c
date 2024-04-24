@@ -6,7 +6,7 @@
 /*   By: hsolet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:37:46 by hsolet            #+#    #+#             */
-/*   Updated: 2024/04/16 13:29:04 by hsolet           ###   ########.fr       */
+/*   Updated: 2024/04/24 16:10:25 by hsolet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,21 +20,26 @@ int end(t_game *s)
 
 static void free_struct(t_game *s)
 {
-	if (s->img->p)
-		mlx_destroy_image(s->mlx, s->img->p);
-	if (s->img->e)
-		mlx_destroy_image(s->mlx, s->img->e);
-	if (s->img->c)
-		mlx_destroy_image(s->mlx, s->img->c);
-	if (s->img->g)
-		mlx_destroy_image(s->mlx, s->img->g);
-	if (s->img->w)
-		mlx_destroy_image(s->mlx, s->img->w);
+	if (s->img->player)
+		mlx_destroy_image(s->mlx, s->img->player);
+	if (s->img->exit)
+		mlx_destroy_image(s->mlx, s->img->exit);
+	if (s->img->col)
+		mlx_destroy_image(s->mlx, s->img->col);
+	if (s->img->ground)
+		mlx_destroy_image(s->mlx, s->img->ground);
+	if (s->img->wall)
+		mlx_destroy_image(s->mlx, s->img->wall);
 	if (s->mlx_win)
 		mlx_destroy_window(s->mlx, s->mlx_win);
+	if(s->buffer)
+		free(s->buffer);
+	if(s->str)
+		free(s->str);
 	if (s)
 		free(s);
 }
+
 void exit_error(t_game *s, char *str)
 {
 	ft_printf("%s", str);
@@ -63,5 +68,3 @@ void exit_error(t_game *s, char *str)
 	free_struct(s);
 	exit(1);
 }
-
-

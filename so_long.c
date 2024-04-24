@@ -6,7 +6,7 @@
 /*   By: hsolet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:39:43 by hsolet            #+#    #+#             */
-/*   Updated: 2024/04/23 15:52:11 by hsolet           ###   ########.fr       */
+/*   Updated: 2024/04/24 16:20:02 by hsolet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "so_long.h"
@@ -24,14 +24,10 @@ void parsing(t_game *s)
 	while (s->i < s->line)
 	{
 		s->map[s->i] = ft_strtrim(get_next_line(s->fd), "\n");
-		//ft_printf("%s\n", s->map[s->i]);
 		if (s->map[s->i] == NULL)
-		{
-		//	ft_printf("sdasas");
-			break;
-		}
+			exit_error(s, "Error\n");
 		if (ft_strlen(s->map[s->i]) > 500)
-			exit_error(s, "Error1\n");
+			exit_error(s, "Error\n");
 		s->map_cpy[s->i] = ft_strdup(s->map[s->i]);
 		s->i++;
 	}
@@ -53,26 +49,17 @@ void init_map(t_game *s)
 		s->read_size = read(s->fd, s->buffer, 1024);
 		if (s->read_size > 0)
 			s->str = ft_strjoin(s->str, s->buffer);
-	//	ft_printf("\nstr = %s\n buffer = %s\n", s->str, s->buffer);
-		
 	}
-	while (s->str[s->i++])
+	while (s->i++ < (int)ft_strlen(s->str))
 	{
 		if (s->str[s->i] == '\n' && s->str[s->i - 1] && s->str[s->i - 1] != '\n')
-		{
-	//		ft_printf("\ns->str = %s et s->str[s->i+1] = %c\n", s->str, s->str[s->i + 1]);
-	//	ft_printf("\nline =  %d\n", s->line);
 			s->line++;
-		}
-		else if (s->str[s->i] == '\n' && s->str[s->i -1] == '\n')
-		{
-			free(s->buffer);
-			close(s->fd);
-			exit_error(s, "Bad folderrrr");
-		}
+		else if (s->str[s->i] == '\n' && s->str[s->i - 1] == '\n')
+			break;
 	}
-	free(s->buffer);
 	close(s->fd);
+	if (s->str[s->i] != '\0' && s->str[s->i - 1] != '\n')
+		exit_error(s, "Bad folder");
 }
 
 void init_struct(t_game *s) 
