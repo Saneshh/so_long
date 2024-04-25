@@ -6,7 +6,7 @@
 /*   By: hsolet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 20:49:07 by hsolet            #+#    #+#             */
-/*   Updated: 2023/11/11 19:38:52 by hsolet           ###   ########.fr       */
+/*   Updated: 2024/04/25 16:17:07 by hsolet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,14 +50,14 @@ static int	ft_endlen(char const *s1, char const *set, int s1len)
 	return (s1len);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char *s1, char const *set)
 {
 	int		i;
 	int		end;
 	int		start;
 	char	*str;
 
-	i = 0;
+	i = -1;
 	if (s1 == NULL || set == NULL)
 		return (NULL);
 	start = startlen(s1, set);
@@ -69,11 +69,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 		str = ft_calloc(((end - start) + 2), sizeof(char));
 		if (str == NULL)
 			return (NULL);
-		while ((start + i) <= end)
-		{
+		while ((start + ++i) <= end)
 			str[i] = s1[i + start];
-			i++;
-		}
+		free(s1);
 		return (str);
 	}
 	return (NULL);

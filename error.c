@@ -6,7 +6,7 @@
 /*   By: hsolet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:37:46 by hsolet            #+#    #+#             */
-/*   Updated: 2024/04/24 16:10:25 by hsolet           ###   ########.fr       */
+/*   Updated: 2024/04/25 15:55:26 by hsolet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,24 @@ static void free_struct(t_game *s)
 		mlx_destroy_image(s->mlx, s->img->ground);
 	if (s->img->wall)
 		mlx_destroy_image(s->mlx, s->img->wall);
+	if (s->img)
+		free(s->img);
 	if (s->mlx_win)
 		mlx_destroy_window(s->mlx, s->mlx_win);
-	if(s->buffer)
+	if (s->buffer)
 		free(s->buffer);
-	if(s->str)
+	if (s->str)
 		free(s->str);
+	if (s->coord)
+		free(s->coord);
+	if (s->mlx)
+	{
+		mlx_destroy_display(s->mlx);
+		free(s->mlx);
+	}
 	if (s)
 		free(s);
+	exit(1);
 }
 
 void exit_error(t_game *s, char *str)

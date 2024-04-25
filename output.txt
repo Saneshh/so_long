@@ -1,404 +1,777 @@
-move : 1
-move : 2
-move : 3
-move : 4
-move : 5
-YOU WIN!!! 
-move : 1
-move : 2
-move : 3
-YOU WIN!!! 
-move : 1
-move : 2
-move : 3
-move : 4
-move : 5
-move : 6
-move : 7
-move : 8
-move : 9
-move : 10
-move : 11
-move : 12
-move : 13
-move : 14
-move : 15
-move : 16
-move : 17
-move : 18
-move : 19
-move : 20
-YOU WIN!!! 
-move : 1
-move : 2
-move : 3
-move : 4
-move : 5
-move : 6
-move : 7
-move : 8
-move : 9
-move : 10
-move : 11
-move : 12
-move : 13
-move : 14
-move : 15
-move : 16
-move : 17
-move : 18
-move : 19
-move : 20
-move : 21
-move : 22
-move : 23
-move : 24
-move : 25
-move : 26
-move : 27
-move : 28
-move : 29
-move : 30
-move : 31
-move : 32
-move : 33
-move : 34
-move : 35
-move : 36
-move : 37
-move : 38
-move : 39
-move : 40
-move : 41
-move : 42
-move : 43
-move : 44
-move : 45
-move : 46
-move : 47
-move : 48
-move : 49
-move : 50
-move : 51
-move : 52
-move : 53
-move : 54
-move : 55
-move : 56
-move : 57
-move : 58
-move : 59
-move : 60
-move : 61
-move : 62
-move : 63
-move : 64
-move : 65
-move : 66
-move : 67
-move : 68
-move : 69
-move : 70
-move : 71
-move : 72
-move : 73
-move : 74
-move : 75
-move : 76
-move : 77
-move : 78
-move : 79
-move : 80
-move : 81
-move : 82
-move : 83
-move : 84
-move : 85
-YOU WIN!!! 
-move : 1
-move : 2
-move : 3
-move : 4
-move : 5
-move : 6
-move : 7
-move : 8
-move : 9
-move : 10
-move : 11
-move : 12
-move : 13
-move : 14
-move : 15
-move : 16
-move : 17
-move : 18
-move : 19
-move : 20
-move : 21
-move : 22
-move : 23
-move : 24
-move : 25
-move : 26
-move : 27
-move : 28
-move : 29
-move : 30
-YOU WIN!!! 
-move : 1
-move : 2
-move : 3
-move : 4
-move : 5
-move : 6
-move : 7
-move : 8
-move : 9
-move : 10
-move : 11
-move : 12
-move : 13
-move : 14
-move : 15
-move : 16
-move : 17
-move : 18
-move : 19
-move : 20
-move : 21
-move : 22
-move : 23
-move : 24
-move : 25
-move : 26
-move : 27
-move : 28
-move : 29
-move : 30
-move : 31
-move : 32
-move : 33
-move : 34
-move : 35
-move : 36
-move : 37
-move : 38
-move : 39
-move : 40
-move : 41
-move : 42
-move : 43
-move : 44
-move : 45
-move : 46
-move : 47
-move : 48
-move : 49
-move : 50
-move : 51
-move : 52
-move : 53
-move : 54
-move : 55
-move : 56
-move : 57
-move : 58
-move : 59
-move : 60
-move : 61
-move : 62
-YOU WIN!!! 
-move : 1
-move : 2
-move : 3
-move : 4
-move : 5
-move : 6
-move : 7
-move : 8
-move : 9
-move : 10
-move : 11
-move : 12
-move : 13
-move : 14
-move : 15
-move : 16
-move : 17
-move : 18
-move : 19
-move : 20
-move : 21
-move : 22
-move : 23
-move : 24
-move : 25
-move : 26
-move : 27
-move : 28
-move : 29
-move : 30
-move : 31
-move : 32
-move : 33
-move : 34
-move : 35
-move : 36
-move : 37
-move : 38
-move : 39
-move : 40
-move : 41
-move : 42
-move : 43
-move : 44
-move : 45
-move : 46
-move : 47
-move : 48
-move : 49
-move : 50
-move : 51
-move : 52
-move : 53
-move : 54
-move : 55
-move : 56
-move : 57
-move : 58
-move : 59
-move : 60
-move : 61
-move : 62
-move : 63
-move : 64
-move : 65
-move : 66
-move : 67
-move : 68
-move : 69
-move : 70
-move : 71
-move : 72
-move : 73
-move : 74
-move : 75
-move : 76
-move : 77
-move : 78
-move : 79
-move : 80
-move : 81
-move : 82
-move : 83
-move : 84
-move : 85
-move : 86
-move : 87
-move : 88
-move : 89
-move : 90
-move : 91
-move : 92
-move : 93
-move : 94
-move : 95
-move : 96
-move : 97
-move : 98
-move : 99
-YOU WIN!!! 
-move : 1
-move : 2
-move : 3
-move : 4
-move : 5
-move : 6
-move : 7
-move : 8
-move : 9
-move : 10
-move : 11
-move : 12
-move : 13
-move : 14
-move : 15
-move : 16
-move : 17
-move : 18
-move : 19
-move : 20
-move : 21
-move : 22
-move : 23
-move : 24
-move : 25
-move : 26
-move : 27
-move : 28
-move : 29
-move : 30
-move : 31
-move : 32
-move : 33
-move : 34
-move : 35
-move : 36
-move : 37
-move : 38
-move : 39
-move : 40
-move : 41
-move : 42
-move : 43
-move : 44
-move : 45
-move : 46
-move : 47
-move : 48
-move : 49
-move : 50
-move : 51
-move : 52
-move : 53
-move : 54
-move : 55
-move : 56
-move : 57
-move : 58
-move : 59
-move : 60
-move : 61
-move : 62
-move : 63
-move : 64
-move : 65
-move : 66
-move : 67
-move : 68
-move : 69
-move : 70
-move : 71
-move : 72
-move : 73
-move : 74
-move : 75
-move : 76
-move : 77
-move : 78
-move : 79
-move : 80
-move : 81
-move : 82
-move : 83
-move : 84
-move : 85
-move : 86
-move : 87
-move : 88
-move : 89
-move : 90
-move : 91
-YOU WIN!!! 
-Bad folder 
+==86886== Memcheck, a memory error detector
+==86886== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86886== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86886== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-empty-line1.ber
+==86886== 
+
+|49|
+Bad folderr==86886== 
+==86886== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86886== 
+==86886== HEAP SUMMARY:
+==86886==     in use at exit: 0 bytes in 0 blocks
+==86886==   total heap usage: 6 allocs, 6 frees, 1,286 bytes allocated
+==86886== 
+==86886== All heap blocks were freed -- no leaks are possible
+==86886== 
+==86886== For lists of detected and suppressed errors, rerun with: -s
+==86886== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86887== Memcheck, a memory error detector
+==86887== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86887== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86887== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-empty-line2.ber
+==86887== 
+
+|49|
+Bad folderr==86887== 
+==86887== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86887== 
+==86887== HEAP SUMMARY:
+==86887==     in use at exit: 0 bytes in 0 blocks
+==86887==   total heap usage: 6 allocs, 6 frees, 1,286 bytes allocated
+==86887== 
+==86887== All heap blocks were freed -- no leaks are possible
+==86887== 
+==86887== For lists of detected and suppressed errors, rerun with: -s
+==86887== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86888== Memcheck, a memory error detector
+==86888== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86888== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86888== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-empty-line3.ber
+==86888== 
+
+|10|
+Error2
+==86888== 
+==86888== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86888== 
+==86888== HEAP SUMMARY:
+==86888==     in use at exit: 0 bytes in 0 blocks
+==86888==   total heap usage: 34 allocs, 34 frees, 2,004 bytes allocated
+==86888== 
+==86888== All heap blocks were freed -- no leaks are possible
+==86888== 
+==86888== For lists of detected and suppressed errors, rerun with: -s
+==86888== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86889== Memcheck, a memory error detector
+==86889== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86889== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86889== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-empty-line4.ber
+==86889== 
+
+|49|
+Bad folderr==86889== 
+==86889== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86889== 
+==86889== HEAP SUMMARY:
+==86889==     in use at exit: 0 bytes in 0 blocks
+==86889==   total heap usage: 6 allocs, 6 frees, 1,787 bytes allocated
+==86889== 
+==86889== All heap blocks were freed -- no leaks are possible
+==86889== 
+==86889== For lists of detected and suppressed errors, rerun with: -s
+==86889== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86890== Memcheck, a memory error detector
+==86890== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86890== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86890== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-extra-E-1.ber
+==86890== 
+
+|49|
+Bad folderr==86890== 
+==86890== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86890== 
+==86890== HEAP SUMMARY:
+==86890==     in use at exit: 0 bytes in 0 blocks
+==86890==   total heap usage: 6 allocs, 6 frees, 1,284 bytes allocated
+==86890== 
+==86890== All heap blocks were freed -- no leaks are possible
+==86890== 
+==86890== For lists of detected and suppressed errors, rerun with: -s
+==86890== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86891== Memcheck, a memory error detector
+==86891== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86891== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86891== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-extra-E-2.ber
+==86891== 
+
+|49|
+Bad folderr==86891== 
+==86891== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86891== 
+==86891== HEAP SUMMARY:
+==86891==     in use at exit: 0 bytes in 0 blocks
+==86891==   total heap usage: 6 allocs, 6 frees, 1,356 bytes allocated
+==86891== 
+==86891== All heap blocks were freed -- no leaks are possible
+==86891== 
+==86891== For lists of detected and suppressed errors, rerun with: -s
+==86891== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86895== Memcheck, a memory error detector
+==86895== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86895== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86895== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-extra-E-3.ber
+==86895== 
+
+|49|
+Bad folderr==86895== 
+==86895== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86895== 
+==86895== HEAP SUMMARY:
+==86895==     in use at exit: 0 bytes in 0 blocks
+==86895==   total heap usage: 6 allocs, 6 frees, 1,785 bytes allocated
+==86895== 
+==86895== All heap blocks were freed -- no leaks are possible
+==86895== 
+==86895== For lists of detected and suppressed errors, rerun with: -s
+==86895== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86896== Memcheck, a memory error detector
+==86896== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86896== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86896== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-extra-E-4.ber
+==86896== 
+
+|49|
+Bad folderr==86896== 
+==86896== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86896== 
+==86896== HEAP SUMMARY:
+==86896==     in use at exit: 0 bytes in 0 blocks
+==86896==   total heap usage: 6 allocs, 6 frees, 1,785 bytes allocated
+==86896== 
+==86896== All heap blocks were freed -- no leaks are possible
+==86896== 
+==86896== For lists of detected and suppressed errors, rerun with: -s
+==86896== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86897== Memcheck, a memory error detector
+==86897== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86897== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86897== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-extra-P-1.ber
+==86897== 
+
+|49|
+Bad folderr==86897== 
+==86897== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86897== 
+==86897== HEAP SUMMARY:
+==86897==     in use at exit: 0 bytes in 0 blocks
+==86897==   total heap usage: 6 allocs, 6 frees, 1,284 bytes allocated
+==86897== 
+==86897== All heap blocks were freed -- no leaks are possible
+==86897== 
+==86897== For lists of detected and suppressed errors, rerun with: -s
+==86897== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86898== Memcheck, a memory error detector
+==86898== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86898== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86898== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-extra-P-2.ber
+==86898== 
+
+|49|
+Bad folderr==86898== 
+==86898== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86898== 
+==86898== HEAP SUMMARY:
+==86898==     in use at exit: 0 bytes in 0 blocks
+==86898==   total heap usage: 6 allocs, 6 frees, 1,355 bytes allocated
+==86898== 
+==86898== All heap blocks were freed -- no leaks are possible
+==86898== 
+==86898== For lists of detected and suppressed errors, rerun with: -s
+==86898== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86899== Memcheck, a memory error detector
+==86899== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86899== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86899== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-extra-P-3.ber
+==86899== 
+
+|49|
+Bad folderr==86899== 
+==86899== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86899== 
+==86899== HEAP SUMMARY:
+==86899==     in use at exit: 0 bytes in 0 blocks
+==86899==   total heap usage: 6 allocs, 6 frees, 1,785 bytes allocated
+==86899== 
+==86899== All heap blocks were freed -- no leaks are possible
+==86899== 
+==86899== For lists of detected and suppressed errors, rerun with: -s
+==86899== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86901== Memcheck, a memory error detector
+==86901== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86901== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86901== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-extra-P-4.ber
+==86901== 
+
+|49|
+Bad folderr==86901== 
+==86901== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86901== 
+==86901== HEAP SUMMARY:
+==86901==     in use at exit: 0 bytes in 0 blocks
+==86901==   total heap usage: 6 allocs, 6 frees, 1,785 bytes allocated
+==86901== 
+==86901== All heap blocks were freed -- no leaks are possible
+==86901== 
+==86901== For lists of detected and suppressed errors, rerun with: -s
+==86901== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86902== Memcheck, a memory error detector
+==86902== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86902== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86902== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-extra-parameter-1.ber
+==86902== 
+
+|49|
+Bad folderr==86902== 
+==86902== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86902== 
+==86902== HEAP SUMMARY:
+==86902==     in use at exit: 0 bytes in 0 blocks
+==86902==   total heap usage: 6 allocs, 6 frees, 1,284 bytes allocated
+==86902== 
+==86902== All heap blocks were freed -- no leaks are possible
+==86902== 
+==86902== For lists of detected and suppressed errors, rerun with: -s
+==86902== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86903== Memcheck, a memory error detector
+==86903== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86903== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86903== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-extra-parameter-2.ber
+==86903== 
+
+|49|
+Bad folderr==86903== 
+==86903== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86903== 
+==86903== HEAP SUMMARY:
+==86903==     in use at exit: 0 bytes in 0 blocks
+==86903==   total heap usage: 6 allocs, 6 frees, 1,284 bytes allocated
+==86903== 
+==86903== All heap blocks were freed -- no leaks are possible
+==86903== 
+==86903== For lists of detected and suppressed errors, rerun with: -s
+==86903== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86904== Memcheck, a memory error detector
+==86904== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86904== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86904== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-extra-parameter-3.ber
+==86904== 
+
+|49|
+Bad folderr==86904== 
+==86904== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86904== 
+==86904== HEAP SUMMARY:
+==86904==     in use at exit: 0 bytes in 0 blocks
+==86904==   total heap usage: 6 allocs, 6 frees, 1,785 bytes allocated
+==86904== 
+==86904== All heap blocks were freed -- no leaks are possible
+==86904== 
+==86904== For lists of detected and suppressed errors, rerun with: -s
+==86904== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86905== Memcheck, a memory error detector
+==86905== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86905== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86905== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-extra-parameter-4.ber
+==86905== 
+
+|49|
+Bad folderr==86905== 
+==86905== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86905== 
+==86905== HEAP SUMMARY:
+==86905==     in use at exit: 0 bytes in 0 blocks
+==86905==   total heap usage: 6 allocs, 6 frees, 1,785 bytes allocated
+==86905== 
+==86905== All heap blocks were freed -- no leaks are possible
+==86905== 
+==86905== For lists of detected and suppressed errors, rerun with: -s
+==86905== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86906== Memcheck, a memory error detector
+==86906== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86906== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86906== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-extra-parameter-5.ber
+==86906== 
+
+|49|
+Bad folderr==86906== 
+==86906== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86906== 
+==86906== HEAP SUMMARY:
+==86906==     in use at exit: 0 bytes in 0 blocks
+==86906==   total heap usage: 6 allocs, 6 frees, 1,785 bytes allocated
+==86906== 
+==86906== All heap blocks were freed -- no leaks are possible
+==86906== 
+==86906== For lists of detected and suppressed errors, rerun with: -s
+==86906== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86907== Memcheck, a memory error detector
+==86907== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86907== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86907== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-invalid-extension
+==86907== 
+
+|49|
+Bad folderr==86907== 
+==86907== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86907== 
+==86907== HEAP SUMMARY:
+==86907==     in use at exit: 0 bytes in 0 blocks
+==86907==   total heap usage: 6 allocs, 6 frees, 1,284 bytes allocated
+==86907== 
+==86907== All heap blocks were freed -- no leaks are possible
+==86907== 
+==86907== For lists of detected and suppressed errors, rerun with: -s
+==86907== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86910== Memcheck, a memory error detector
+==86910== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86910== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86910== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-missing-C-1.ber
+==86910== 
+
+|49|
+Bad folderr==86910== 
+==86910== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86910== 
+==86910== HEAP SUMMARY:
+==86910==     in use at exit: 0 bytes in 0 blocks
+==86910==   total heap usage: 6 allocs, 6 frees, 1,284 bytes allocated
+==86910== 
+==86910== All heap blocks were freed -- no leaks are possible
+==86910== 
+==86910== For lists of detected and suppressed errors, rerun with: -s
+==86910== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86911== Memcheck, a memory error detector
+==86911== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86911== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86911== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-missing-C-2.ber
+==86911== 
+
+|49|
+Bad folderr==86911== 
+==86911== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86911== 
+==86911== HEAP SUMMARY:
+==86911==     in use at exit: 0 bytes in 0 blocks
+==86911==   total heap usage: 6 allocs, 6 frees, 1,356 bytes allocated
+==86911== 
+==86911== All heap blocks were freed -- no leaks are possible
+==86911== 
+==86911== For lists of detected and suppressed errors, rerun with: -s
+==86911== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86912== Memcheck, a memory error detector
+==86912== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86912== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86912== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-missing-C-3.ber
+==86912== 
+
+|49|
+Bad folderr==86912== 
+==86912== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86912== 
+==86912== HEAP SUMMARY:
+==86912==     in use at exit: 0 bytes in 0 blocks
+==86912==   total heap usage: 6 allocs, 6 frees, 1,785 bytes allocated
+==86912== 
+==86912== All heap blocks were freed -- no leaks are possible
+==86912== 
+==86912== For lists of detected and suppressed errors, rerun with: -s
+==86912== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86913== Memcheck, a memory error detector
+==86913== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86913== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86913== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-missing-E-1.ber
+==86913== 
+
+|49|
+Bad folderr==86913== 
+==86913== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86913== 
+==86913== HEAP SUMMARY:
+==86913==     in use at exit: 0 bytes in 0 blocks
+==86913==   total heap usage: 6 allocs, 6 frees, 1,284 bytes allocated
+==86913== 
+==86913== All heap blocks were freed -- no leaks are possible
+==86913== 
+==86913== For lists of detected and suppressed errors, rerun with: -s
+==86913== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86914== Memcheck, a memory error detector
+==86914== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86914== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86914== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-missing-E-2.ber
+==86914== 
+
+|49|
+Bad folderr==86914== 
+==86914== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86914== 
+==86914== HEAP SUMMARY:
+==86914==     in use at exit: 0 bytes in 0 blocks
+==86914==   total heap usage: 6 allocs, 6 frees, 1,356 bytes allocated
+==86914== 
+==86914== All heap blocks were freed -- no leaks are possible
+==86914== 
+==86914== For lists of detected and suppressed errors, rerun with: -s
+==86914== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86916== Memcheck, a memory error detector
+==86916== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86916== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86916== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-missing-E-3.ber
+==86916== 
+
+|49|
+Bad folderr==86916== 
+==86916== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86916== 
+==86916== HEAP SUMMARY:
+==86916==     in use at exit: 0 bytes in 0 blocks
+==86916==   total heap usage: 6 allocs, 6 frees, 1,785 bytes allocated
+==86916== 
+==86916== All heap blocks were freed -- no leaks are possible
+==86916== 
+==86916== For lists of detected and suppressed errors, rerun with: -s
+==86916== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86917== Memcheck, a memory error detector
+==86917== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86917== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86917== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-missing-P-1.ber
+==86917== 
+
+|49|
+Bad folderr==86917== 
+==86917== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86917== 
+==86917== HEAP SUMMARY:
+==86917==     in use at exit: 0 bytes in 0 blocks
+==86917==   total heap usage: 6 allocs, 6 frees, 1,284 bytes allocated
+==86917== 
+==86917== All heap blocks were freed -- no leaks are possible
+==86917== 
+==86917== For lists of detected and suppressed errors, rerun with: -s
+==86917== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86918== Memcheck, a memory error detector
+==86918== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86918== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86918== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-missing-P-2.ber
+==86918== 
+
+|49|
+Bad folderr==86918== 
+==86918== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86918== 
+==86918== HEAP SUMMARY:
+==86918==     in use at exit: 0 bytes in 0 blocks
+==86918==   total heap usage: 6 allocs, 6 frees, 1,425 bytes allocated
+==86918== 
+==86918== All heap blocks were freed -- no leaks are possible
+==86918== 
+==86918== For lists of detected and suppressed errors, rerun with: -s
+==86918== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86919== Memcheck, a memory error detector
+==86919== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86919== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86919== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-missing-P-3.ber
+==86919== 
+
+|49|
+Bad folderr==86919== 
+==86919== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86919== 
+==86919== HEAP SUMMARY:
+==86919==     in use at exit: 0 bytes in 0 blocks
+==86919==   total heap usage: 6 allocs, 6 frees, 1,785 bytes allocated
+==86919== 
+==86919== All heap blocks were freed -- no leaks are possible
+==86919== 
+==86919== For lists of detected and suppressed errors, rerun with: -s
+==86919== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86920== Memcheck, a memory error detector
+==86920== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86920== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86920== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-missing-P-4.ber
+==86920== 
+
+|49|
+Bad folderr==86920== 
+==86920== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86920== 
+==86920== HEAP SUMMARY:
+==86920==     in use at exit: 0 bytes in 0 blocks
+==86920==   total heap usage: 6 allocs, 6 frees, 2,073 bytes allocated
+==86920== 
+==86920== All heap blocks were freed -- no leaks are possible
+==86920== 
+==86920== For lists of detected and suppressed errors, rerun with: -s
+==86920== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86921== Memcheck, a memory error detector
+==86921== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86921== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86921== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-missing-W-1.ber
+==86921== 
+
+|49|
+Bad folderr==86921== 
+==86921== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86921== 
+==86921== HEAP SUMMARY:
+==86921==     in use at exit: 0 bytes in 0 blocks
+==86921==   total heap usage: 6 allocs, 6 frees, 1,284 bytes allocated
+==86921== 
+==86921== All heap blocks were freed -- no leaks are possible
+==86921== 
+==86921== For lists of detected and suppressed errors, rerun with: -s
+==86921== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86922== Memcheck, a memory error detector
+==86922== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86922== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86922== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-missing-W-2.ber
+==86922== 
+
+|48|
+Bad folderr==86922== 
+==86922== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86922== 
+==86922== HEAP SUMMARY:
+==86922==     in use at exit: 0 bytes in 0 blocks
+==86922==   total heap usage: 6 allocs, 6 frees, 1,425 bytes allocated
+==86922== 
+==86922== All heap blocks were freed -- no leaks are possible
+==86922== 
+==86922== For lists of detected and suppressed errors, rerun with: -s
+==86922== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86925== Memcheck, a memory error detector
+==86925== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86925== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86925== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-missing-W-3.ber
+==86925== 
+
+|49|
+Bad folderr==86925== 
+==86925== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86925== 
+==86925== HEAP SUMMARY:
+==86925==     in use at exit: 0 bytes in 0 blocks
+==86925==   total heap usage: 6 allocs, 6 frees, 1,785 bytes allocated
+==86925== 
+==86925== All heap blocks were freed -- no leaks are possible
+==86925== 
+==86925== For lists of detected and suppressed errors, rerun with: -s
+==86925== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86926== Memcheck, a memory error detector
+==86926== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86926== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86926== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-missing-W-4.ber
+==86926== 
+
+|49|
+Bad folderr==86926== 
+==86926== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86926== 
+==86926== HEAP SUMMARY:
+==86926==     in use at exit: 0 bytes in 0 blocks
+==86926==   total heap usage: 6 allocs, 6 frees, 1,785 bytes allocated
+==86926== 
+==86926== All heap blocks were freed -- no leaks are possible
+==86926== 
+==86926== For lists of detected and suppressed errors, rerun with: -s
+==86926== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86927== Memcheck, a memory error detector
+==86927== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86927== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86927== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-missing-W-5.ber
+==86927== 
+
+|49|
+Bad folderr==86927== 
+==86927== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86927== 
+==86927== HEAP SUMMARY:
+==86927==     in use at exit: 0 bytes in 0 blocks
+==86927==   total heap usage: 6 allocs, 6 frees, 1,785 bytes allocated
+==86927== 
+==86927== All heap blocks were freed -- no leaks are possible
+==86927== 
+==86927== For lists of detected and suppressed errors, rerun with: -s
+==86927== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86928== Memcheck, a memory error detector
+==86928== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86928== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86928== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-not-rectangular-1.ber
+==86928== 
+
+|49|
+Bad folderr==86928== 
+==86928== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86928== 
+==86928== HEAP SUMMARY:
+==86928==     in use at exit: 0 bytes in 0 blocks
+==86928==   total heap usage: 6 allocs, 6 frees, 1,285 bytes allocated
+==86928== 
+==86928== All heap blocks were freed -- no leaks are possible
+==86928== 
+==86928== For lists of detected and suppressed errors, rerun with: -s
+==86928== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86929== Memcheck, a memory error detector
+==86929== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86929== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86929== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-not-rectangular-2.ber
+==86929== 
+
+|49|
+Bad folderr==86929== 
+==86929== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86929== 
+==86929== HEAP SUMMARY:
+==86929==     in use at exit: 0 bytes in 0 blocks
+==86929==   total heap usage: 6 allocs, 6 frees, 1,426 bytes allocated
+==86929== 
+==86929== All heap blocks were freed -- no leaks are possible
+==86929== 
+==86929== For lists of detected and suppressed errors, rerun with: -s
+==86929== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86931== Memcheck, a memory error detector
+==86931== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86931== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86931== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-not-rectangular-3.ber
+==86931== 
+
+|49|
+Bad folderr==86931== 
+==86931== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86931== 
+==86931== HEAP SUMMARY:
+==86931==     in use at exit: 0 bytes in 0 blocks
+==86931==   total heap usage: 6 allocs, 6 frees, 1,362 bytes allocated
+==86931== 
+==86931== All heap blocks were freed -- no leaks are possible
+==86931== 
+==86931== For lists of detected and suppressed errors, rerun with: -s
+==86931== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+==86932== Memcheck, a memory error detector
+==86932== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==86932== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==86932== Command: ./so_long /nfs/homes/hsolet/42_Project/so_long/maps/invalid/map-not-rectangular-4.ber
+==86932== 
+
+|49|
+Bad folderr==86932== 
+==86932== FILE DESCRIPTORS: 3 open (3 std) at exit.
+==86932== 
+==86932== HEAP SUMMARY:
+==86932==     in use at exit: 0 bytes in 0 blocks
+==86932==   total heap usage: 6 allocs, 6 frees, 1,358 bytes allocated
+==86932== 
+==86932== All heap blocks were freed -- no leaks are possible
+==86932== 
+==86932== For lists of detected and suppressed errors, rerun with: -s
+==86932== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
