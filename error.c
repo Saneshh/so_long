@@ -6,32 +6,20 @@
 /*   By: hsolet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:37:46 by hsolet            #+#    #+#             */
-/*   Updated: 2024/04/25 15:55:26 by hsolet           ###   ########.fr       */
+/*   Updated: 2024/04/26 15:21:05 by hsolet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int end(t_game *s)
+int	end(t_game *s)
 {
 	exit_error(s, "Window Closed");
 	return (0);
 }
 
-static void free_struct(t_game *s)
+static	void	free_struct(t_game *s)
 {
-	if (s->img->player)
-		mlx_destroy_image(s->mlx, s->img->player);
-	if (s->img->exit)
-		mlx_destroy_image(s->mlx, s->img->exit);
-	if (s->img->col)
-		mlx_destroy_image(s->mlx, s->img->col);
-	if (s->img->ground)
-		mlx_destroy_image(s->mlx, s->img->ground);
-	if (s->img->wall)
-		mlx_destroy_image(s->mlx, s->img->wall);
-	if (s->img)
-		free(s->img);
 	if (s->mlx_win)
 		mlx_destroy_window(s->mlx, s->mlx_win);
 	if (s->buffer)
@@ -50,7 +38,23 @@ static void free_struct(t_game *s)
 	exit(1);
 }
 
-void exit_error(t_game *s, char *str)
+static	void	free_img(t_game	*s)
+{
+	if (s->img->player)
+		mlx_destroy_image(s->mlx, s->img->player);
+	if (s->img->exit)
+		mlx_destroy_image(s->mlx, s->img->exit);
+	if (s->img->col)
+		mlx_destroy_image(s->mlx, s->img->col);
+	if (s->img->ground)
+		mlx_destroy_image(s->mlx, s->img->ground);
+	if (s->img->wall)
+		mlx_destroy_image(s->mlx, s->img->wall);
+	if (s->img)
+		free(s->img);
+}
+
+void	exit_error(t_game *s, char *str)
 {
 	ft_printf("%s", str);
 	s->i = 0;
@@ -75,6 +79,6 @@ void exit_error(t_game *s, char *str)
 		}
 		free(s->map_cpy);
 	}
+	free_img(s);
 	free_struct(s);
-	exit(1);
 }

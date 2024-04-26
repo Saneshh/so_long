@@ -6,12 +6,12 @@
 /*   By: hsolet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:34:41 by hsolet            #+#    #+#             */
-/*   Updated: 2024/04/24 16:05:52 by hsolet           ###   ########.fr       */
+/*   Updated: 2024/04/26 14:45:18 by hsolet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "so_long.h"
 
-static void move_right(t_game *s)
+static	void	move_right(t_game *s)
 {
 	if (s->map[s->coord->y][s->coord->x + 1] == '1')
 		return ;
@@ -35,10 +35,10 @@ static void move_right(t_game *s)
 	else
 		s->map[s->coord->y][s->coord->x] = '0';
 	s->coord->x += 1;
-	put_img(s);
+	put_decor(s);
 }
 
-static void move_left(t_game *s)
+static	void	move_left(t_game *s)
 {
 	if (s->map[s->coord->y][s->coord->x - 1] == '1')
 		return ;
@@ -62,10 +62,10 @@ static void move_left(t_game *s)
 	else
 		s->map[s->coord->y][s->coord->x] = '0';
 	s->coord->x -= 1;
-	put_img(s);
+	put_decor(s);
 }
 
-static void move_up(t_game *s)
+static	void	move_up(t_game *s)
 {
 	if (s->map[s->coord->y - 1][s->coord->x] == '1')
 		return ;
@@ -89,10 +89,10 @@ static void move_up(t_game *s)
 	else
 		s->map[s->coord->y][s->coord->x] = '0';
 	s->coord->y -= 1;
-	put_img(s);
+	put_decor(s);
 }
 
-static void move_down(t_game *s)
+static	void	move_down(t_game *s)
 {
 	if (s->map[s->coord->y + 1][s->coord->x] == '1')
 		return ;
@@ -116,10 +116,10 @@ static void move_down(t_game *s)
 	else
 		s->map[s->coord->y][s->coord->x] = '0';
 	s->coord->y += 1;
-	put_img(s);
+	put_decor(s);
 }
 
-int key_bind(int keybind, t_game *s)
+int	key_bind(int keybind, t_game *s)
 {
 	if (keybind == 119)
 		move_up(s);

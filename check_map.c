@@ -6,12 +6,12 @@
 /*   By: hsolet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:32:03 by hsolet            #+#    #+#             */
-/*   Updated: 2024/04/25 16:12:50 by hsolet           ###   ########.fr       */
+/*   Updated: 2024/04/26 14:44:27 by hsolet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "so_long.h"
 
-void check_map(t_game *s)
+void	check_map(t_game	*s)
 {
 	s->i = 0;
 	while (s->map[s->i])
@@ -36,12 +36,10 @@ void check_map(t_game *s)
 		if (ft_strlen(s->map[s->i]) != ft_strlen(s->map[s->i + 1]))
 			exit_error(s, "Error3\n");
 		s->i++;
-
 	}
-
 }
 
-void count_element(t_game *s)
+void	count_element(t_game	*s)
 {
 	s->i = 0;
 	while (s->map[s->i])
@@ -49,15 +47,15 @@ void count_element(t_game *s)
 		s->j = 0;
 		while (s->map[s->i][s->j])
 		{
-			if(s->map[s->i][s->j] == '0')
+			if (s->map[s->i][s->j] == '0')
 				s->ground += 1;
-			else if(s->map[s->i][s->j] == '1')
+			else if (s->map[s->i][s->j] == '1')
 				s->wall += 1;
-			else if(s->map[s->i][s->j] == 'P')
+			else if (s->map[s->i][s->j] == 'P')
 				s->player += 1;
-			else if(s->map[s->i][s->j] == 'E')
+			else if (s->map[s->i][s->j] == 'E')
 				s->ext += 1;
-			else if(s->map[s->i][s->j] == 'C')
+			else if (s->map[s->i][s->j] == 'C')
 				s->col += 1;
 			s->j++;
 		}
@@ -65,7 +63,7 @@ void count_element(t_game *s)
 	}
 }
 
-static void check_map_possible(t_game *s, int i, int j)
+static	void	check_map_possible(t_game	*s, int i, int j)
 {
 	if (s->map_cpy[i - 1][j] != '1' && s->map[i - 1][j])
 	{
@@ -89,7 +87,7 @@ static void check_map_possible(t_game *s, int i, int j)
 	}
 }
 
-static void check_map_final(t_game *s)
+static	void	check_map_final(t_game *s)
 {
 	s->i = 0;
 	while (s->map_cpy[s->i])
@@ -98,16 +96,16 @@ static void check_map_final(t_game *s)
 		while (s->map_cpy[s->i][s->j])
 		{
 			if (s->map_cpy[s->i][s->j] != '1' && s->map_cpy[s->i][s->j] != 'P')
-				{
+			{
 				exit_error(s, "Map not winnable");
-					}
+			}
 			s->j++;
 		}
 		s->i++;
 	}
 }
 
-void check_map_format(t_game *s)
+void	check_map_format(t_game *s)
 {
 	s->i = 0;
 	while (s->map[s->i])
@@ -127,6 +125,6 @@ void check_map_format(t_game *s)
 		ft_printf("col = %d\nplayer = %d\nexit = %d\n", s->col, s->player, s->ext);
 		exit_error(s, "Missing Player, Collectible or Exit");
 	}
-		check_map_possible(s, s->coord->y, s->coord->x);
+	check_map_possible(s, s->coord->y, s->coord->x);
 	check_map_final(s);
 }

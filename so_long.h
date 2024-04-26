@@ -6,7 +6,7 @@
 /*   By: hsolet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 09:47:36 by hsolet            #+#    #+#             */
-/*   Updated: 2024/04/24 15:50:58 by hsolet           ###   ########.fr       */
+/*   Updated: 2024/04/26 14:54:25 by hsolet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ typedef struct s_image
 	void	*ground;
 }	t_image;
 
-typedef	struct s_game
+typedef struct s_game
 {
 	int		fd;
 	int		i;
@@ -62,15 +62,15 @@ typedef	struct s_game
 	t_image	*img;
 }	t_game;
 
-	void	parsing(t_game *s);
-	void	count_element(t_game *s);
-	void	init_struct(t_game *s);
-	void	init_map(t_game *s);
-	void	check_map(t_game *s);
-	void	check_map_format(t_game *s);
-	void	exit_error(t_game *s, char *str);
-	void	set_img(t_game *s);
-	int		key_bind(int keybind, t_game *s);
-	int		end(t_game *s);
-	void	put_img(t_game *s);
+void	parsing(t_game *s);
+void	count_element(t_game *s);
+void	init_struct(t_game *s);
+void	init_map(t_game *s);
+void	check_map(t_game *s);
+void	check_map_format(t_game *s);
+void	exit_error(t_game *s, char *str);
+void	set_img(t_game *s);
+int		key_bind(int keybind, t_game *s);
+int		end(t_game *s);
+void	put_decor(t_game *s);
 #endif

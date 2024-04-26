@@ -6,12 +6,12 @@
 /*   By: hsolet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:39:43 by hsolet            #+#    #+#             */
-/*   Updated: 2024/04/25 16:55:31 by hsolet           ###   ########.fr       */
+/*   Updated: 2024/04/26 16:02:49 by hsolet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "so_long.h"
 
-void parsing(t_game *s)
+void	parsing(t_game *s)
 {
 	s->fd = open(s->folder, O_RDONLY);
 	s->map = ft_calloc(s->line + 1, sizeof(char *));
@@ -53,20 +53,32 @@ void	init_map(t_game *s)
 	}
 	while (s->i++ < (int)ft_strlen(s->str))
 	{
-		if (s->str[s->i] == '\n' && s->str[s->i - 1] && s->str[s->i - 1] != '\n')
+		if (s->str[s->i] == '\n'
+			&& s->str[s->i - 1] && s->str[s->i - 1] != '\n')
 			s->line++;
 		else if (s->str[s->i] == '\n' && s->str[s->i - 1] == '\n')
-			break;
+			break ;
 	}
 	close(s->fd);
-	ft_printf("\n|%d|\n", s->str[s->i - 2]);
 	if (s->str[s->i - 2] != '\n')
-	{
 		exit_error(s, "Bad folderr");
-	}
 }
 
-void init_struct(t_game *s) 
+static	int	str_r_search(char *str, char *search, t_game *s)
+{
+	s->i = ft_strlen(str) - 1;
+	s->j = ft_strlen(search) - 1;
+	while (s->j >= 0 && s->i > 0)
+	{
+		if (str[s->i] != search[s->j])
+			return (0);
+		s->i--;
+		s->j--;
+	}
+	return (1);
+}
+
+void	init_struct(t_game	*s)
 {
 	s->ground = 0;
 	s->wall = 0;
@@ -84,20 +96,8 @@ void init_struct(t_game *s)
 	s->coord = ft_calloc(1, sizeof(*s->coord));
 	if (!s->coord)
 		exit_error(s, "Error\n");
-}
-
-static int str_r_search(char *str, char *search, t_game *s)
-{
-	s->i = ft_strlen(str);
-	s->j = ft_strlen(search);
-	while (s->j > 0 && str[s->i])
-	{
-		if (str[s->i] != search[s->j])
-			return (0);
-		s->i--;
-		s->j--;
-	}
-	return (1);
+	if (!str_r_search(s->folder, ".ber", s))
+		exit_error(s, "Not a .ber");
 }
 
 int	main(int argc, char **argv)
@@ -110,8 +110,6 @@ int	main(int argc, char **argv)
 	if (argc != 2)
 		exit_error(s, "./so_long <MAP_NAME>.ber");
 	s->folder = argv[1];
-	if (!str_r_search(argv[1], ".ber", s))
-		exit_error(s, "Not a .ber");
 	init_struct(s);
 	init_map(s);
 	parsing(s);
@@ -124,7 +122,7 @@ int	main(int argc, char **argv)
 	set_img(s);
 	s->mlx_win = mlx_new_window(s->mlx,
 			ft_strlen(s->map[0]) * 90, s->line * 90, "So_long");
-	put_img(s);
+	put_decor(s);
 	mlx_hook(s->mlx_win, 2, (1L << 0), key_bind, s);
 	mlx_hook(s->mlx_win, 17, (1L << 17), end, s);
 	mlx_loop(s->mlx);
