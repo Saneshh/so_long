@@ -6,7 +6,7 @@
 /*   By: hsolet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:32:03 by hsolet            #+#    #+#             */
-/*   Updated: 2024/04/27 15:16:06 by hsolet           ###   ########.fr       */
+/*   Updated: 2024/04/27 20:11:36 by hsolet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "so_long.h"
@@ -20,7 +20,7 @@ void	check_map(t_game	*s)
 		while (s->map[s->i][s->j])
 		{
 			if (ft_strchr("01PEC", s->map[s->i][s->j]) == NULL)
-				exit_error(s, "Error2\n");
+				exit_error(s, "Error\n");
 			if (s->map[s->i][s->j] == 'P')
 			{
 				s->coord->y = s->i;
@@ -34,7 +34,7 @@ void	check_map(t_game	*s)
 	while (s->i < s->line - 1)
 	{
 		if (ft_strlen(s->map[s->i]) != ft_strlen(s->map[s->i + 1]))
-			exit_error(s, "Error3\n");
+			exit_error(s, "Error\n");
 		s->i++;
 	}
 }

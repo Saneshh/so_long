@@ -6,7 +6,7 @@
 /*   By: hsolet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:37:46 by hsolet            #+#    #+#             */
-/*   Updated: 2024/04/27 17:51:50 by hsolet           ###   ########.fr       */
+/*   Updated: 2024/04/27 20:11:45 by hsolet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,7 @@ void	parsing(t_game *s)
 		s->map_cpy[s->i] = ft_strdup(s->map[s->i]);
 		s->i++;
 	}
-	get_next_line(s->fd);
+	free(get_next_line(s->fd));
 	close(s->fd);
 	if (ft_strlen(s->map[0]) > 500)
 		exit_error(s, "Error\n");
