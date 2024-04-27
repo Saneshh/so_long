@@ -6,33 +6,21 @@
 /*   By: hsolet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:39:43 by hsolet            #+#    #+#             */
-/*   Updated: 2024/04/26 16:02:49 by hsolet           ###   ########.fr       */
+/*   Updated: 2024/04/27 17:50:25 by hsolet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "so_long.h"
 
-void	parsing(t_game *s)
+static	void	check_line(t_game *s)
 {
-	s->fd = open(s->folder, O_RDONLY);
-	s->map = ft_calloc(s->line + 1, sizeof(char *));
-	if (!(s->map))
-		return ;
-	s->map_cpy = ft_calloc(s->line + 1, sizeof(char *));
-	if (!s->map_cpy)
-		return ;
-	s->i = 0;
-	while (s->i < s->line)
+	while (s->i++ < (int)ft_strlen(s->str))
 	{
-		s->map[s->i] = ft_strtrim(get_next_line(s->fd), "\n");
-		if (s->map[s->i] == NULL)
-			exit_error(s, "Error\n");
-		if (ft_strlen(s->map[s->i]) > 500)
-			exit_error(s, "Error\n");
-		s->map_cpy[s->i] = ft_strdup(s->map[s->i]);
-		s->i++;
+		if (s->str[s->i] == '\n'
+			&& s->str[s->i - 1] && s->str[s->i - 1] != '\n')
+			s->line++;
+		else if (s->str[s->i] == '\n' && s->str[s->i - 1] == '\n')
+			break ;
 	}
-	get_next_line(s->fd);
-	close(s->fd);
 }
 
 void	init_map(t_game *s)
@@ -48,20 +36,14 @@ void	init_map(t_game *s)
 	while (s->read_size > 0)
 	{
 		s->read_size = read(s->fd, s->buffer, 1024);
+		s->buffer[s->read_size] = 0;
 		if (s->read_size > 0)
 			s->str = ft_strjoin(s->str, s->buffer);
 	}
-	while (s->i++ < (int)ft_strlen(s->str))
-	{
-		if (s->str[s->i] == '\n'
-			&& s->str[s->i - 1] && s->str[s->i - 1] != '\n')
-			s->line++;
-		else if (s->str[s->i] == '\n' && s->str[s->i - 1] == '\n')
-			break ;
-	}
+	check_line(s);
 	close(s->fd);
 	if (s->str[s->i - 2] != '\n')
-		exit_error(s, "Bad folderr");
+		exit_error(s, "Bad folder");
 }
 
 static	int	str_r_search(char *str, char *search, t_game *s)

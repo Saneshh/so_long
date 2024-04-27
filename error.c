@@ -6,7 +6,7 @@
 /*   By: hsolet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:37:46 by hsolet            #+#    #+#             */
-/*   Updated: 2024/04/26 15:21:05 by hsolet           ###   ########.fr       */
+/*   Updated: 2024/04/27 17:51:50 by hsolet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,4 +81,28 @@ void	exit_error(t_game *s, char *str)
 	}
 	free_img(s);
 	free_struct(s);
+}
+
+void	parsing(t_game *s)
+{
+	s->fd = open(s->folder, O_RDONLY);
+	s->map = ft_calloc(s->line + 1, sizeof(char *));
+	if (!(s->map))
+		return ;
+	s->map_cpy = ft_calloc(s->line + 1, sizeof(char *));
+	if (!s->map_cpy)
+		return ;
+	s->i = 0;
+	while (s->i < s->line)
+	{
+		s->map[s->i] = ft_strtrim(get_next_line(s->fd), "\n");
+		if (s->map[s->i] == NULL)
+			exit_error(s, "Error\n");
+		s->map_cpy[s->i] = ft_strdup(s->map[s->i]);
+		s->i++;
+	}
+	get_next_line(s->fd);
+	close(s->fd);
+	if (ft_strlen(s->map[0]) > 500)
+		exit_error(s, "Error\n");
 }

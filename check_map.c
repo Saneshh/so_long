@@ -6,7 +6,7 @@
 /*   By: hsolet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:32:03 by hsolet            #+#    #+#             */
-/*   Updated: 2024/04/26 14:44:27 by hsolet           ###   ########.fr       */
+/*   Updated: 2024/04/27 15:16:06 by hsolet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "so_long.h"
@@ -95,7 +95,8 @@ static	void	check_map_final(t_game *s)
 		s->j = 0;
 		while (s->map_cpy[s->i][s->j])
 		{
-			if (s->map_cpy[s->i][s->j] != '1' && s->map_cpy[s->i][s->j] != 'P')
+			if (s->map_cpy[s->i][s->j] != '1' && s->map_cpy[s->i][s->j] != 'P'
+				&& s->map_cpy[s->i][s->j] != '0')
 			{
 				exit_error(s, "Map not winnable");
 			}
@@ -115,16 +116,13 @@ void	check_map_format(t_game *s)
 		{
 			if ((s->map[s->i][s->j]) != '1' && (s->j == 0 || s->i == s->line
 				|| s->i == 0 || s->j == (int)ft_strlen(s->map[s->i])))
-				exit_error(s, "");
+				exit_error(s, "Error\n");
 			s->j++;
 		}
 		s->i++;
 	}
 	if (s->col == 0 || s->player != 1 || s->ext != 1)
-	{
-		ft_printf("col = %d\nplayer = %d\nexit = %d\n", s->col, s->player, s->ext);
 		exit_error(s, "Missing Player, Collectible or Exit");
-	}
 	check_map_possible(s, s->coord->y, s->coord->x);
 	check_map_final(s);
 }
