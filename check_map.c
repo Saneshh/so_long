@@ -6,7 +6,7 @@
 /*   By: hsolet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:32:03 by hsolet            #+#    #+#             */
-/*   Updated: 2024/04/27 20:11:36 by hsolet           ###   ########.fr       */
+/*   Updated: 2024/04/28 16:39:56 by hsolet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "so_long.h"
@@ -114,8 +114,9 @@ void	check_map_format(t_game *s)
 		s->j = 0;
 		while (s->map[s->i][s->j])
 		{
-			if ((s->map[s->i][s->j]) != '1' && (s->j == 0 || s->i == s->line
-				|| s->i == 0 || s->j == (int)ft_strlen(s->map[s->i])))
+			if ((s->map[s->i][s->j]) != '1' && (s->j == 0 ||
+				s->i == (s->line - 1) || s->i == 0
+				|| s->j == ((int)ft_strlen(s->map[s->i]) - 1)))
 				exit_error(s, "Error\n");
 			s->j++;
 		}

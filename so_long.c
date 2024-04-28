@@ -6,7 +6,7 @@
 /*   By: hsolet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 12:39:43 by hsolet            #+#    #+#             */
-/*   Updated: 2024/04/27 19:48:06 by hsolet           ###   ########.fr       */
+/*   Updated: 2024/04/28 14:17:44 by hsolet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "so_long.h"
@@ -19,7 +19,7 @@ static	void	check_line(t_game *s)
 			&& s->str[s->i - 1] != '\n')
 			s->line++;
 		else if (s->str[s->i] == '\n' && s->str[s->i - 1] == '\n')
-			exit_error(s, "Bad Folder\n");
+			exit_error(s, "Error\n");
 	}
 }
 
@@ -27,7 +27,7 @@ void	init_map(t_game *s)
 {
 	s->fd = open(s->folder, O_RDONLY);
 	if (s->fd <= 0)
-		exit_error(s, "Bad folder");
+		exit_error(s, "Error\n");
 	s->i = 0;
 	s->str = ft_strdup("");
 	s->buffer = ft_calloc(1025, sizeof(char));
@@ -43,7 +43,7 @@ void	init_map(t_game *s)
 	check_line(s);
 	close(s->fd);
 	if (s->str[s->i - 2] != '\n')
-		exit_error(s, "Bad folder");
+		exit_error(s, "Error\n");
 }
 
 static	int	str_r_search(char *str, char *search, t_game *s)
