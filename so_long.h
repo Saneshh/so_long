@@ -6,7 +6,7 @@
 /*   By: hsolet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/06 09:47:36 by hsolet            #+#    #+#             */
-/*   Updated: 2024/04/26 14:54:25 by hsolet           ###   ########.fr       */
+/*   Updated: 2024/05/04 17:35:35 by hsolet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ typedef struct s_game
 	void	*img_ptr;
 	int		img_width;
 	int		img_height;
-	t_coord	*coord;
+	t_coord	coord;
 	t_image	*img;
 }	t_game;
 

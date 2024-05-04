@@ -6,7 +6,7 @@
 /*   By: hsolet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:37:46 by hsolet            #+#    #+#             */
-/*   Updated: 2024/04/27 20:11:45 by hsolet           ###   ########.fr       */
+/*   Updated: 2024/05/04 17:29:36 by hsolet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	end(t_game *s)
 {
-	exit_error(s, "Window Closed");
+	exit_error(s, "Window Closed\n");
 	return (0);
 }
 
@@ -26,8 +26,6 @@ static	void	free_struct(t_game *s)
 		free(s->buffer);
 	if (s->str)
 		free(s->str);
-	if (s->coord)
-		free(s->coord);
 	if (s->mlx)
 	{
 		mlx_destroy_display(s->mlx);
@@ -40,18 +38,20 @@ static	void	free_struct(t_game *s)
 
 static	void	free_img(t_game	*s)
 {
-	if (s->img->player)
-		mlx_destroy_image(s->mlx, s->img->player);
-	if (s->img->exit)
-		mlx_destroy_image(s->mlx, s->img->exit);
-	if (s->img->col)
-		mlx_destroy_image(s->mlx, s->img->col);
-	if (s->img->ground)
-		mlx_destroy_image(s->mlx, s->img->ground);
-	if (s->img->wall)
-		mlx_destroy_image(s->mlx, s->img->wall);
 	if (s->img)
+	{
+		if (s->img->player)
+			mlx_destroy_image(s->mlx, s->img->player);
+		if (s->img->exit)
+			mlx_destroy_image(s->mlx, s->img->exit);
+		if (s->img->col)
+			mlx_destroy_image(s->mlx, s->img->col);
+		if (s->img->ground)
+			mlx_destroy_image(s->mlx, s->img->ground);
+		if (s->img->wall)
+			mlx_destroy_image(s->mlx, s->img->wall);
 		free(s->img);
+	}
 }
 
 void	exit_error(t_game *s, char *str)
@@ -88,21 +88,23 @@ void	parsing(t_game *s)
 	s->fd = open(s->folder, O_RDONLY);
 	s->map = ft_calloc(s->line + 1, sizeof(char *));
 	if (!(s->map))
-		return ;
+		exit_error(s, "Error\nAlloc error\n");
 	s->map_cpy = ft_calloc(s->line + 1, sizeof(char *));
 	if (!s->map_cpy)
-		return ;
+		exit_error(s, "Error\nAlloc error\n");
 	s->i = 0;
 	while (s->i < s->line)
 	{
 		s->map[s->i] = ft_strtrim(get_next_line(s->fd), "\n");
 		if (s->map[s->i] == NULL)
-			exit_error(s, "Error\n");
+			exit_error(s, "Error\nAlloc error\n");
 		s->map_cpy[s->i] = ft_strdup(s->map[s->i]);
+		if (!s->map_cpy[s->i])
+			exit_error(s, "Error\nAlloc error\n");
 		s->i++;
 	}
 	free(get_next_line(s->fd));
 	close(s->fd);
-	if (ft_strlen(s->map[0]) > 500)
-		exit_error(s, "Error\n");
+	if (ft_strlen(s->map[0]) > 500 || s->line > 500)
+		exit_error(s, "Error\nMap is too big\n");
 }
