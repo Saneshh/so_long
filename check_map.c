@@ -11,58 +11,32 @@
 /* ************************************************************************** */
 #include "so_long.h"
 
-void	check_map(t_game	*s)
+void	check_map(t_game	*s, int i, int j)
 {
-	s->i = 0;
-	while (s->map[s->i])
+	i = 0;
+	while (s->map[i])
 	{
-		s->j = 0;
-		while (s->map[s->i][s->j])
+		j = 0;
+		while (s->map[i][j])
 		{
-			if (ft_strchr("01PEC", s->map[s->i][s->j]) == NULL)
+			if (ft_strchr("01PEC", s->map[i][j]) == NULL)
 				exit_error(s, "Error\nWrong characters\n");
-			if (s->map[s->i][s->j] == 'P')
+			if (s->map[i][j] == 'P')
 			{
-				s->coord.y = s->i;
-				s->coord.x = s->j;
+				s->coord.y = i;
+				s->coord.x = j;
 			}
-			s->j++;
+			j++;
 		}
-		s->i++;
+		i++;
 	}
-	s->i = 0;
-	while (s->i < s->line - 1)
+	i = 0;
+	while (i < s->line - 1)
 	{
-		if (ft_strlen(s->map[s->i]) != ft_strlen(s->map[s->i + 1]))
+		if (ft_strlen(s->map[i]) != ft_strlen(s->map[i + 1]))
 			exit_error(s, "Error\nMap is not rectangular\n");
-		s->i++;
+		i++;
 	}
-}
-
-void	count_element(t_game	*s)
-{
-	s->i = 0;
-	while (s->map[s->i])
-	{
-		s->j = 0;
-		while (s->map[s->i][s->j])
-		{
-			if (s->map[s->i][s->j] == '0')
-				s->ground += 1;
-			else if (s->map[s->i][s->j] == '1')
-				s->wall += 1;
-			else if (s->map[s->i][s->j] == 'P')
-				s->player += 1;
-			else if (s->map[s->i][s->j] == 'E')
-				s->ext += 1;
-			else if (s->map[s->i][s->j] == 'C')
-				s->col += 1;
-			s->j++;
-		}
-		s->i++;
-	}
-	if (s->col == 0 || s->player != 1 || s->ext != 1)
-		exit_error(s, "Error\nNeed 1 Player, 1 Exit and 1+ Collectible\n");
 }
 
 static	void	check_map_possible(t_game	*s, int i, int j)
@@ -89,41 +63,41 @@ static	void	check_map_possible(t_game	*s, int i, int j)
 	}
 }
 
-static	void	check_map_final(t_game *s)
+static	void	check_map_final(t_game *s, int i, int j)
 {
-	s->i = 0;
-	while (s->map_cpy[s->i])
+	i = 0;
+	while (s->map_cpy[i])
 	{
-		s->j = 0;
-		while (s->map_cpy[s->i][s->j])
+		j = 0;
+		while (s->map_cpy[i][j])
 		{
-			if (s->map_cpy[s->i][s->j] != '1' && s->map_cpy[s->i][s->j] != 'P'
-				&& s->map_cpy[s->i][s->j] != '0')
+			if (s->map_cpy[i][j] != '1' && s->map_cpy[i][j] != 'P'
+				&& s->map_cpy[i][j] != '0')
 			{
 				exit_error(s, "Error\nMap not winnable\n");
 			}
-			s->j++;
+			j++;
 		}
-		s->i++;
+		i++;
 	}
 }
 
-void	check_map_format(t_game *s)
+void	check_map_format(t_game *s, int i, int j)
 {
-	s->i = 0;
-	while (s->map[s->i])
+	i = 0;
+	while (s->map[i])
 	{
-		s->j = 0;
-		while (s->map[s->i][s->j])
+		j = 0;
+		while (s->map[i][j])
 		{
-			if ((s->map[s->i][s->j]) != '1' && (s->j == 0 ||
-				s->i == (s->line - 1) || s->i == 0
-				|| s->j == ((int)ft_strlen(s->map[s->i]) - 1)))
+			if ((s->map[i][j]) != '1' && (j == 0 ||
+				i == (s->line - 1) || i == 0
+				|| j == ((int)ft_strlen(s->map[i]) - 1)))
 				exit_error(s, "Error\nSurround the map with '1'\n");
-			s->j++;
+			j++;
 		}
-		s->i++;
+		i++;
 	}
 	check_map_possible(s, s->coord.y, s->coord.x);
-	check_map_final(s);
+	check_map_final(s, i, j);
 }

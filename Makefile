@@ -6,6 +6,7 @@ SRCS        :=            error.c \
                           affichage.c \
                           move.c \
                           so_long.c \
+			  parsing.c\
                           
 OBJS        := $(SRCS:.c=.o)
 

@@ -33,13 +33,19 @@ typedef struct s_image
 	void	*col;
 	void	*exit;
 	void	*ground;
+	int	img_width;
+	int	img_height;
 }	t_image;
+
+typedef struct s_buffer
+{
+	char *str;
+	char *buffer;
+}	t_buffer;
 
 typedef struct s_game
 {
 	int		fd;
-	int		i;
-	int		j;
 	int		col;
 	int		player;
 	int		ext;
@@ -47,27 +53,21 @@ typedef struct s_game
 	int		ground;
 	int		line;
 	int		move;
-	int		read_size;
 	char	*folder;
-	char	*str;
-	char	*buffer;
 	char	**map_cpy;
 	char	**map;
 	void	*mlx;
 	void	*mlx_win;
-	void	*img_ptr;
-	int		img_width;
-	int		img_height;
+	t_buffer *buf;
 	t_coord	coord;
 	t_image	*img;
 }	t_game;
 
-void	parsing(t_game *s);
-void	count_element(t_game *s);
-void	init_struct(t_game *s);
-void	init_map(t_game *s);
-void	check_map(t_game *s);
-void	check_map_format(t_game *s);
+void	parsing(t_game *s, int i, int j);
+void	init_struct(t_game *s, int i);
+void	init_map(t_game *s, int i);
+void	check_map(t_game *s, int i, int j);
+void	check_map_format(t_game *s, int i, int j);
 void	exit_error(t_game *s, char *str);
 void	set_img(t_game *s);
 int		key_bind(int keybind, t_game *s);
