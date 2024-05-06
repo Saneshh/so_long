@@ -73,4 +73,5 @@ void	set_img(t_game *s);
 int		key_bind(int keybind, t_game *s);
 int		end(t_game *s);
 void	put_decor(t_game *s);
+void	print_move(t_game *s);
 #endif

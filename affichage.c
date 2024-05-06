@@ -22,13 +22,6 @@ static void	put_other(t_game	*s, int i, int j)
 	if (s->map[i][j] == 'C')
 		mlx_put_image_to_window(s->mlx, s->mlx_win,
 			s->img->col, (j * 64) + 22, (i * 64) + 22);
-	if (s->map[i][j] == (char)(69 + 80))
-	{
-		mlx_put_image_to_window(s->mlx,
-			s->mlx_win, s->img->exit, j * 64, i * 64);
-		mlx_put_image_to_window(s->mlx, s->mlx_win,
-			s->img->player, (j * 64) + 17, (i * 64) + 17);
-	}
 }
 
 void	put_decor(t_game	*s)
@@ -76,4 +69,20 @@ void	set_img(t_game	*s)
 			"./image/ground.xpm", &s->img->img_width, &s->img->img_height);
 	if (s->img->ground == 0)
 		exit_error(s, "Error\nImage can't be load\n");
+}
+
+void	print_move(t_game *s)
+{
+	if (s->map[s->coord.y][s->coord.x] == (char)(80 + 69))
+	{
+		s->map[s->coord.y][s->coord.x] = 'E';
+		mlx_put_image_to_window(s->mlx, s->mlx_win, s->img->exit,
+			s->coord.x * 64, s->coord.y * 64);
+	}
+	else 
+	{
+		s->map[s->coord.y][s->coord.x] = '0';
+		mlx_put_image_to_window(s->mlx, s->mlx_win, s->img->ground,
+			s->coord.x * 64, s->coord.y * 64);
+	}
 }
