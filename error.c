@@ -80,5 +80,7 @@ void	exit_error(t_game *s, char *str)
 				free(s->map_cpy[i]);
 		free(s->map_cpy);
 	}
+	if (s->fd > 0)
+		close(s->fd);
 	free_img(s);
 }

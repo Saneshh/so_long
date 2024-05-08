@@ -4,9 +4,9 @@
 /*   affichage.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hsolet <marvin@42.fr>                      +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
+/*                                                +#+#+#+#+#+   +#+         */
 /*   Created: 2024/04/12 14:35:57 by hsolet            #+#    #+#             */
-/*   Updated: 2024/05/04 17:29:31 by hsolet           ###   ########.fr       */
+/*   Updated: 2024/05/08 15:02:48 by hsolet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "so_long.h"
@@ -79,7 +79,7 @@ void	print_move(t_game *s)
 		mlx_put_image_to_window(s->mlx, s->mlx_win, s->img->exit,
 			s->coord.x * 64, s->coord.y * 64);
 	}
-	else 
+	else
 	{
 		s->map[s->coord.y][s->coord.x] = '0';
 		mlx_put_image_to_window(s->mlx, s->mlx_win, s->img->ground,

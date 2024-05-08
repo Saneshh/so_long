@@ -6,7 +6,7 @@
 /*   By: hsolet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:34:41 by hsolet            #+#    #+#             */
-/*   Updated: 2024/05/04 17:09:15 by hsolet           ###   ########.fr       */
+/*   Updated: 2024/05/08 15:03:48 by hsolet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "so_long.h"
@@ -31,7 +31,6 @@ static	void	move_right(t_game *s)
 	s->coord.x += 1;
 	mlx_put_image_to_window(s->mlx, s->mlx_win, s->img->player,
 		(s->coord.x * 64) + 17, (s->coord.y * 64) + 17);
-	
 }
 
 static	void	move_left(t_game *s)
